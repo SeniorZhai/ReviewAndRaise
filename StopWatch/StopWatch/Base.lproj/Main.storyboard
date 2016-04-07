@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eRa-kl-G1L"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vgv-mp-Kub"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jn9-6w-ISk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dje-Vy-g7c">
+                                <rect key="frame" x="0.0" y="20" width="600" height="300"/>
+                                <color key="backgroundColor" red="0.7803921568627451" green="0.71764705882352942" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <color key="textColor" red="0.80000000000000004" green="0.98039215686274506" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m42-TQ-Na7" userLabel="pause">
+                                <rect key="frame" x="300" y="319" width="300" height="300"/>
+                                <color key="backgroundColor" red="1" green="0.41176470588235292" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="pause"/>
+                                <connections>
+                                    <action selector="pause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1eT-He-rMn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHR-RM-9sU" userLabel="play">
+                                <rect key="frame" x="0.0" y="320" width="300" height="280"/>
+                                <color key="backgroundColor" red="0.90980392156862744" green="0.70980392156862748" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fWz-xr-1Tt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSE-7t-h2N">
+                                <rect key="frame" x="534" y="40" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NDl-Pc-cyE"/>
+                                    <constraint firstAttribute="width" constant="46" id="hjZ-1i-lqU"/>
+                                </constraints>
+                                <state key="normal" title="reset">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CBZ-do-aJz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="m42-TQ-Na7" firstAttribute="leading" secondItem="bHR-RM-9sU" secondAttribute="trailing" id="4nK-lt-xen"/>
+                            <constraint firstItem="Dje-Vy-g7c" firstAttribute="leading" secondItem="Jn9-6w-ISk" secondAttribute="leading" id="IfG-UQ-HIe"/>
+                            <constraint firstItem="xSE-7t-h2N" firstAttribute="top" secondItem="Dje-Vy-g7c" secondAttribute="top" constant="20" id="Ikg-Md-ytZ"/>
+                            <constraint firstItem="m42-TQ-Na7" firstAttribute="width" secondItem="Dje-Vy-g7c" secondAttribute="width" multiplier="1:2" id="R13-5N-70W"/>
+                            <constraint firstItem="bHR-RM-9sU" firstAttribute="leading" secondItem="Jn9-6w-ISk" secondAttribute="leading" id="Srz-7J-cD4"/>
+                            <constraint firstItem="Vgv-mp-Kub" firstAttribute="top" secondItem="bHR-RM-9sU" secondAttribute="bottom" id="TMC-0k-HFb"/>
+                            <constraint firstItem="m42-TQ-Na7" firstAttribute="top" secondItem="Dje-Vy-g7c" secondAttribute="bottom" id="Xdz-pJ-wxY"/>
+                            <constraint firstItem="Dje-Vy-g7c" firstAttribute="height" secondItem="Jn9-6w-ISk" secondAttribute="height" multiplier="1:2" id="huj-b6-ZQ8"/>
+                            <constraint firstItem="bHR-RM-9sU" firstAttribute="top" secondItem="Dje-Vy-g7c" secondAttribute="bottom" id="jPv-d1-6ya"/>
+                            <constraint firstItem="m42-TQ-Na7" firstAttribute="trailing" secondItem="Jn9-6w-ISk" secondAttribute="trailing" id="lzk-Ew-MNb"/>
+                            <constraint firstItem="m42-TQ-Na7" firstAttribute="height" secondItem="Jn9-6w-ISk" secondAttribute="height" multiplier="1:2" id="myM-tZ-vsg"/>
+                            <constraint firstAttribute="trailing" secondItem="Dje-Vy-g7c" secondAttribute="trailing" id="pV1-DY-HMO"/>
+                            <constraint firstItem="bHR-RM-9sU" firstAttribute="leading" secondItem="Jn9-6w-ISk" secondAttribute="leading" id="qvk-Jk-6e7"/>
+                            <constraint firstItem="xSE-7t-h2N" firstAttribute="trailing" secondItem="Dje-Vy-g7c" secondAttribute="trailing" constant="-20" id="sHX-VN-hqh"/>
+                            <constraint firstItem="Dje-Vy-g7c" firstAttribute="top" secondItem="eRa-kl-G1L" secondAttribute="bottom" id="znN-ZJ-dQ7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="Dje-Vy-g7c" id="oc3-4b-xCa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="193" y="345"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pause" width="42" height="56"/>
+        <image name="play" width="48" height="61"/>
+    </resources>
+</document>
